@@ -1,7 +1,12 @@
+/* {
+    border: 1px solid red !important;
+}*/
+
 body,
 div,
 ul,
 li,
+a,
 p,
 h1,
 h2,
@@ -9,9 +14,26 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   font-family: "Roboto", sans-serif;
+  color: #036;
+}
+
+/*grid added to have the "desktop" effect on wider screen: I like it from newspaper reading*/
+.grid {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    padding: 5px;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-8 {
+    width: 66.66%;
 }
 
 .clear-fix {
@@ -26,7 +48,6 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
   line-height: 48px;
   display: inline;
 }
@@ -34,102 +55,85 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #b2c1d1;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
   font-style: italic;
-  font-size: 20px;
-  color: #000;
+  font-size: 24px;
   line-height: 22px;
+  padding: 5px;
 }
 
 h4 {
   font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
+  font-size: 18px;
+  padding-top: 10px;
   line-height: 17px;
 }
 
 h2,
-h3,
-h4,
 h5 {
-  padding:10px 5%;
+  padding: 10px 5%;
 
 }
 
-
 .date-text {
   font-style: italic;
-  font-size: 14px;
-  color: #999;
+  font-size: 16px;
   line-height: 16px;
+  margin-top: 10px;
   float: left;
 }
 
 .location-text {
   font-style: italic;
-  font-size: 14px;
-  color: #999;
+  font-size: 16px;
   line-height: 16px;
+  margin-top: 10px;
   float: right;
 
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 10px;
 }
 
 a {
-  color: #1199c3;
   text-decoration: none;
   margin-top: 10px;
   display: block;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+a:hover {
+  color: #6684a3;
+  text-decoration: underline;
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
+ul {
+  list-style-type: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+li {
+  list-style-type: square;
+  list-style-position: inside;
+  margin-left: 5px;
 }
 
-.orange-text {
-  color: #f5ae23;
+img {
+  padding: 10px;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
+span {
+  padding: 5px;
 }
 
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #b2c1d1;
 }
 
 .flex-box {
@@ -137,16 +141,11 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding: 10px;
 }
 
 .center-content {
   padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
 }
 
 .biopic {
@@ -156,12 +155,68 @@ ul {
   display: none;
 }
 
-img {
-  padding: 10px;
+/*to put one skill below the other as a list*/
+#skills {
+  display: block;
+  list-style-type: square;
+  list-style-position: inside;
 }
 
-span {
-  padding: 5px;
+#topContacts li{
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.blue-text {
+  font-style: italic;
+}
+
+.colored-links {
+  color: #1199c3;
+}
+
+.welcome-message {
+  font-size: 18px;
+  color: #b2c1d1;
+  text-shadow: 2px 2px 5px #036;
+  line-height: 28px;
+  float: left;
+}
+
+.gray {
+  background-color: #f3f2ee;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.footer {
+  background-color: #b2c1d1;
+}
+
+#footerContacts li{
+  display: inline;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+#footerContacts a{
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.footer-links {
+  display: inline;
+  font-style: italic;
+}
+
+.dark-blue {
+  background-color: #036;
 }
 
 #lets-connect {
